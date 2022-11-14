@@ -1,19 +1,19 @@
 <?php
 
-namespace nguyenanhung\Backend\Your_Project\Base;
+namespace tienhm\Backend\Auth\Base;
 
 use nguyenanhung\MyDebug\Benchmark;
 use nguyenanhung\MyDebug\Logger;
 use nguyenanhung\MyCache\Cache;
 use nguyenanhung\MyRequests\MyRequests;
-use nguyenanhung\Backend\Your_Project\Helper\Helper;
+use tienhm\Backend\Auth\Helper\Helper;
 
 /**
  * Class BaseCore
  *
- * @package   nguyenanhung\Backend\Your_Project\Base
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Base
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 class BaseCore
 {
@@ -23,7 +23,7 @@ class BaseCore
     const KEY_AUTH     = 'AUTH';
     const KEY_CONFIG   = 'CONFIG';
 
-    /** @var \nguyenanhung\Backend\Your_Project\Helper\Helper */
+    /** @var \tienhm\Backend\Auth\Helper\Helper */
     protected $helper;
     /** @var \nguyenanhung\MyDebug\Benchmark */
     protected $benchmark;
@@ -53,8 +53,8 @@ class BaseCore
      *
      * @param array $options
      *
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      */
     public function __construct(array $options = array())
     {
@@ -100,8 +100,8 @@ class BaseCore
      * Function getVersion
      *
      * @return string
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 40:11
      */
     public function getVersion(): string
@@ -115,8 +115,8 @@ class BaseCore
      * @param array $sdkConfig
      *
      * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 37:01
      */
     public function setSdkConfig(array $sdkConfig): BaseCore
@@ -139,8 +139,8 @@ class BaseCore
      * @param $inputData
      *
      * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 37:37
      */
     public function setInputData($inputData): BaseCore
@@ -157,8 +157,8 @@ class BaseCore
      * @param bool $responseIsObject
      *
      * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 48:40
      */
     public function setResponseIsObject(bool $responseIsObject): BaseCore
@@ -174,8 +174,8 @@ class BaseCore
      * @param bool $responseIsJson
      *
      * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 49:31
      */
     public function setResponseIsJson(bool $responseIsJson): BaseCore
@@ -189,8 +189,8 @@ class BaseCore
      * Function getResponse
      *
      * @return mixed
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 37:56
      */
     public function getResponse()

@@ -1,21 +1,22 @@
 <?php
 
-namespace nguyenanhung\Backend\Your_Project\Database;
+namespace tienhm\Backend\Auth\Database;
 
-use nguyenanhung\Backend\Your_Project\Base\BaseCore;
-use nguyenanhung\Backend\Your_Project\Database\Traits\SignatureTable;
+use tienhm\Backend\Auth\Base\BaseCore;
+use tienhm\Backend\Auth\Database\Traits\SignatureTable;
 use nguyenanhung\MyDatabase\Model\BaseModel;
+use tienhm\Backend\Auth\Database\Traits\UserTable;
 
 /**
  * Class Database
  *
- * @package   nguyenanhung\Backend\Your_Project\Database
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Database
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 class Database extends BaseCore
 {
-    use SignatureTable;
+    use SignatureTable, UserTable;
 
     /** @var array $database */
     protected $database;
@@ -25,8 +26,8 @@ class Database extends BaseCore
      *
      * @param array $options
      *
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      */
     public function __construct(array $options = array())
     {
@@ -40,8 +41,8 @@ class Database extends BaseCore
      * @param $database
      *
      * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 38:16
      */
     public function setDatabase($database): Database
@@ -55,8 +56,8 @@ class Database extends BaseCore
      * Function connection
      *
      * @return \nguyenanhung\MyDatabase\Model\BaseModel
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 40:58
      */
     public function connection(): BaseModel
@@ -73,17 +74,35 @@ class Database extends BaseCore
     }
 
     /**
+     * Function initTable - Connection to special table
+     *
+     * @param $table
+     *
+     * @return \nguyenanhung\MyDatabase\Model\BaseModel
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
+     * @time     : 15/11/2022 06:39
+     */
+    protected function initTable($table): BaseModel
+    {
+        $DB = $this->connection();
+        $DB->setTable($table);
+
+        return $DB;
+    }
+
+    /**
      * Function checkExitsRecord
      *
      * @param $wheres
      * @param $tableName
      *
      * @return bool
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 07/08/2022 13:25
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
+     * @time     : 15/11/2022 06:39
      */
-    public function checkExitsRecord($wheres, $tableName): bool
+    public function checkExitsRecords($wheres, $tableName): bool
     {
         $DB = $this->connection();
         $DB->setTable($tableName);

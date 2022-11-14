@@ -1,13 +1,13 @@
 <?php
 
-namespace nguyenanhung\Backend\Your_Project\Config;
+namespace tienhm\Backend\Auth\Config;
 
 /**
  * Class DataRepository
  *
- * @package   nguyenanhung\Backend\Your_Project\Config
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Config
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 class DataRepository
 {
@@ -17,7 +17,7 @@ class DataRepository
     /**
      * Hàm lấy nội dung config được quy định trong thư mục config
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @author: tienhm <tienhm@beetsoft.com.vn>
      * @time  : 9/28/18 14:47
      *
      * @param string $configName Tên file config

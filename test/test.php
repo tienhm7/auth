@@ -2,8 +2,8 @@
 /**
  * Project template-backend-package
  * Created by PhpStorm
- * User: 713uk13m <dev@nguyenanhung.com>
- * Copyright: 713uk13m <dev@nguyenanhung.com>
+ * User: tienhm <tienhm@beetsoft.com.vn>
+ * Copyright: tienhm <tienhm@beetsoft.com.vn>
  * Date: 02/07/2022
  * Time: 00:19
  */
@@ -34,7 +34,7 @@ $config = [
     ]
 ];
 
-use nguyenanhung\Backend\Your_Project\Http\WebServiceAccount;
+use tienhm\Backend\Auth\Http\WebServiceAccount;
 
 $inputData = [
     'start_date' => '2022-06-01',

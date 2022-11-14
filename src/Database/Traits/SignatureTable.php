@@ -1,13 +1,13 @@
 <?php
 
-namespace nguyenanhung\Backend\Your_Project\Database\Traits;
+namespace tienhm\Backend\Auth\Database\Traits;
 
 /**
  * Trait SignatureTable
  *
- * @package   nguyenanhung\Backend\Your_Project\Database\Traits
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Database\Traits
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 trait SignatureTable
 {
@@ -18,8 +18,8 @@ trait SignatureTable
      * @param int|null    $role
      *
      * @return array|bool|\Illuminate\Support\Collection|mixed|object|string|null
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      * @time     : 22/06/2022 56:41
      */
     public function getUserSignature(string $nickname = '', int $role = null)

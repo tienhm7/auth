@@ -1,30 +1,79 @@
 <?php
 
-namespace nguyenanhung\Backend\Your_Project\Http;
+namespace tienhm\Backend\Auth\Http;
 
-use nguyenanhung\Backend\Your_Project\Base\BaseCore;
-use nguyenanhung\Backend\Your_Project\Database\Database;
+use tienhm\Backend\Auth\Base\BaseCore;
+use tienhm\Backend\Auth\Database\Database;
 
 /**
  * Class BaseHttp
  *
- * @package   nguyenanhung\Backend\Your_Project\Http
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Http
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 class BaseHttp extends BaseCore
 {
-    const EXIT_CODE = [
-        'success'           => 0,
-        'contentIsEmpty'    => 1,
-        'invalidParams'     => 2,
-        'invalidSignature'  => 3,
-        'outdatedSignature' => 4,
-        'invalidService'    => 5,
-        'paramsIsEmpty'     => 6,
+    public const EXIT_CODE = [
+        'success'             => 0,
+        'contentIsEmpty'      => 1,
+        'invalidParams'       => 2,
+        'invalidSignature'    => 3,
+        'outdatedSignature'   => 4,
+        'invalidService'      => 5,
+        'paramsIsEmpty'       => 6,
+        'duplicatePrimaryKey' => 7,
+        'notFound'            => 8,
+        'notChange'           => 9,
+        'notUnique'           => 10,
+        'failed'              => 11,
     ];
 
-    /** @var \nguyenanhung\Backend\Your_Project\Database\Database */
+    public const PAGINATE = array(
+        'page_number' => 1,
+        'max_results' => 10,
+    );
+
+    public const STATUS_LEVEL = [0, 1];
+
+    public const PREFIX_AUTH = '$';
+
+    public const MESSAGES = array(
+        'invalidSignature' => 'Sai chu ky xac thuc',
+        'success'          => 'Ghi nhan thanh cong',
+        'failed'           => 'Ghi nhan that bai',
+        'invalidParams'    => 'Sai hoac thieu tham so',
+        'duplicate'        => 'Duplicate value',
+        'notFound'         => 'Khong ton tai ban ghi tuong ung',
+        'fieldNotFound'    => 'khong ton tai',
+        'notChange'        => 'Update that bai, data khong thay doi',
+        'notUnique'        => 'da ton tai, hay thu lai',
+    );
+
+    public const ACTION = array(
+        'create'   => 'create',
+        'getAll'   => 'list',
+        'update'   => 'update',
+        'read'     => 'show',
+        'delete'   => 'delete',
+        'login'    => 'login',
+        'register' => 'register',
+    );
+
+    public const STATUS = array(
+        'deactivate'  => 0,
+        'active'      => 1,
+        'wait_active' => 2,
+    );
+
+    public const SHOW_STATUS = array(
+        'deactivate' => 0,
+        'active'     => 1,
+    );
+
+    public const DEFAULT_LANGUAGE = 'vietnamese';
+
+    /** @var \tienhm\Backend\Auth\Database\Database */
     protected $db;
 
     /**
@@ -32,8 +81,8 @@ class BaseHttp extends BaseCore
      *
      * @param array $options
      *
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @author   : tienhm <tienhm@beetsoft.com.vn>
+     * @copyright: tienhm <tienhm@beetsoft.com.vn>
      */
     public function __construct(array $options = array())
     {

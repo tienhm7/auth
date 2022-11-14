@@ -2,20 +2,20 @@
 /**
  * Project template-backend-package
  * Created by PhpStorm
- * User: 713uk13m <dev@nguyenanhung.com>
- * Copyright: 713uk13m <dev@nguyenanhung.com>
+ * User: tienhm <tienhm@beetsoft.com.vn>
+ * Copyright: tienhm <tienhm@beetsoft.com.vn>
  * Date: 02/07/2022
  * Time: 00:27
  */
 
-namespace nguyenanhung\Backend\Your_Project\Config;
+namespace tienhm\Backend\Auth\Config;
 
 /**
  * Class Config
  *
- * @package   nguyenanhung\Backend\Your_Project\Config
- * @author    713uk13m <dev@nguyenanhung.com>
- * @copyright 713uk13m <dev@nguyenanhung.com>
+ * @package   tienhm\Backend\Auth\Config
+ * @author    tienhm <tienhm@beetsoft.com.vn>
+ * @copyright tienhm <tienhm@beetsoft.com.vn>
  */
 class Config
 {
