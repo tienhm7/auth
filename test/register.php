@@ -11,10 +11,10 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $config = [
     'DATABASE' => [
         'driver'    => 'mysql',
-        'host'      => 'mariadb',
+        'host'      => '127.0.0.1',
         'username'  => 'root',
-        'password'  => 'hungna',
-        'database'  => 'docker_database',
+        'password'  => '1234qazx',
+        'database'  => 'bapi',
         'port'      => 3306,
         'prefix'    => '',
         'charset'   => 'utf8',
@@ -36,17 +36,17 @@ $config = [
 
 use tienhm\Backend\Auth\Http\WebServiceAccount;
 
-$inputData = [
-    'start_date' => '2022-06-01',
-    'end_date'   => '2022-06-05',
-    'type'       => 1,
-    'acc'        => 'xxx',
-    'signature'  => 'xxx'
+$inputRegisterData = [
+    'fullname' => 'Hoàng Mạnh Tiến',
+    'email'   => 'tienhm@beetsoft.com.vn',
+    'password'       => 123456,
+    'confirm_password'        => '123456',
+    'phone'  => '0974844203'
 ];
 
 $api = new WebServiceAccount($config['OPTIONS']);
 $api->setSdkConfig($config);
-$api->setInputData($inputData)
+$api->setInputData($inputRegisterData)
     ->register();
 
 echo "<pre>";
