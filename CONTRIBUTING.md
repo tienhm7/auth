@@ -4,6 +4,6 @@
 
 If any question & request, please contact following information
 
-| Name        | Email                | Skype            | Facebook      |
-|-------------|----------------------|------------------|---------------|
-| Hung Nguyen | tienhm@beetsoft.com.vn | nguyenanhung5891 | @nguyenanhung |
+| Name            | Email                  | Skype                | Facebook   |
+|-----------------|------------------------|----------------------|------------|
+| Hoang Manh Tien | tienhm@beetsoft.com.vn | conthuyendocmoc_a888 | @tiencntt2 |

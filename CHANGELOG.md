@@ -1,39 +1,18 @@
 # CHANGELOG
 
-## [1.0.4] - 2022/08/07
-
-### Fixed
-
-- [x] Upgrade vendor package
-
-## [1.0.3] - 2022/07/20
-
-### Fixed
-
-- [x] Add Validation
-
-## [1.0.2] - 2022/07/04
-
-### Fixed
-
-- [x] Add Test
-
-## [1.0.1] - 2022/07/02
-
-### Fixed
-
-- [x] Fixed Helper
-
-## [1.0.0] - 2022/07/02
+## [1.0.0] - 2022/11/13
 
 ### Added
 
-- [x] Create Project Structure
+- [x] Handle register user
+- [x] Handle login user
+- [x] Test register user
+- [x] Test login user
 
 ## Contact & Support
 
 If any question & request, please contact following information
 
-| Name        | Email                | Skype            | Facebook      |
-|-------------|----------------------|------------------|---------------|
-| Hung Nguyen | tienhm@beetsoft.com.vn | nguyenanhung5891 | @nguyenanhung |
+| Name            | Email                  | Skype                | Facebook   |
+|-----------------|------------------------|----------------------|------------|
+| Hoang Manh Tien | tienhm@beetsoft.com.vn | conthuyendocmoc_a888 | @tiencntt2 |
