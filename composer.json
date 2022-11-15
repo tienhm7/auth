@@ -1,6 +1,6 @@
 {
     "type": "library",
-    "name": "tienhm/laravel-auth",
+    "name": "tienhm7/auth",
     "description": "The package is used to authentication",
     "keywords": [
         "backend",
@@ -8,7 +8,7 @@
         "library",
         "php"
     ],
-    "homepage": "https://github.com/tienhm7/laravel-auth",
+    "homepage": "https://github.com/tienhm7/auth",
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [

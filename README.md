@@ -10,6 +10,46 @@ Simple package for registration and login
 // Add package to composer
 composer require tienhm7/auth
 
+// Intergrate to Framework
+Example Laravel
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use tienhm\Backend\Auth\Http\WebServiceAccount;
+
+class AuthController extends Controller
+{
+    private WebServiceAccount $module;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->module = (new WebServiceAccount($this->config['OPTIONS']))->setSDKConfig($this->config);
+    }
+
+    public function login(Request $request)
+    {
+        $data = $request->only('user', 'password');
+        $api = $this->module;
+        $api->setInputData($data)
+            ->login();
+
+        return $api->getResponse();
+    }
+
+    public function register(Request $request)
+    {
+        $data = $request->only('username', 'fullname', 'email', 'password', 'confirm_password', 'phone');
+        $api = $this->module;
+        $api->setInputData($data)
+            ->register();
+
+        return $api->getResponse();
+    }
+}
 ```
 
 
