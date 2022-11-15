@@ -20,7 +20,7 @@ trait UserTable
      */
     protected function initUserTable(): BaseModel
     {
-        return $this->initTable('tnv_user');
+        return $this->initTable('tnv_beetsoft_user');
     }
 
     /**

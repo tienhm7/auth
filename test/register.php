@@ -36,7 +36,7 @@ $config = [
 
 use tienhm\Backend\Auth\Http\WebServiceAccount;
 
-$inputRegisterData = [
+$inputData = [
     'fullname' => 'Hoàng Mạnh Tiến',
     'email'   => 'tienhm@beetsoft.com.vn',
     'password'       => 123456,
@@ -46,7 +46,7 @@ $inputRegisterData = [
 
 $api = new WebServiceAccount($config['OPTIONS']);
 $api->setSdkConfig($config);
-$api->setInputData($inputRegisterData)
+$api->setInputData($inputData)
     ->register();
 
 echo "<pre>";

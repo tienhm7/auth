@@ -39,7 +39,7 @@ class WebServiceAccount extends BaseHttp
         'success' => ' successfully',
     );
 
-    protected $table = 'tnv_user';
+    protected $table = 'tnv_beetsoft_user';
 
     public function register(): WebServiceAccount
     {
